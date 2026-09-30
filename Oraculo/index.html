@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doble o Nada - Arcade Timing Game</title>
+    <!-- Fuentes estilo Vintage desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,900;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <!-- Capa de fondo decorativa -->
+    <div class="grid-bg"></div>
+
+    <main class="contenedor-principal">
+      <header class="encabezado">
+        <h1 class="titulo-neon">⚡ DOBLE O NADA ⚡</h1>
+        <p class="instrucciones">
+          Presiona <kbd>Espacio</kbd> o el botón para detener la aguja en la zona verde.
+        </p>
+      </header>
+
+      <!-- Panel del Marcador -->
+      <section class="panel-stats">
+        <div class="stat-box">
+          <span class="stat-label">RACHA</span>
+          <span id="stat-racha" class="stat-value">0</span>
+        </div>
+        <div class="stat-box highlight">
+          <span class="stat-label">EN JUEGO</span>
+          <span id="stat-botin" class="stat-value">$0</span>
+        </div>
+        <div class="stat-box highlight-banco">
+          <span class="stat-label">BOTÍN TOTAL</span>
+          <span id="stat-banco" class="stat-value">$0</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">VELOCIDAD</span>
+          <span id="stat-velocidad" class="stat-value">1.0x</span>
+        </div>
+      </section>
+
+      <!-- Pista / Barra de Juego -->
+      <section class="contenedor-pista">
+        <div id="pista" class="pista">
+          <div id="zona-verde" class="zona-verde"></div>
+          <div id="aguja" class="aguja"></div>
+        </div>
+      </section>
+
+      <!-- Panel de Controles -->
+      <section class="panel-controles">
+        <div class="grupo-botones">
+          <button id="boton-parar" class="btn-arcade">¡PARAR!</button>
+          <button id="boton-retirarse" class="btn-arcade btn-secundario" disabled>RETIRARSE</button>
+          <button id="boton-reintentar" class="btn-arcade btn-secundario" disabled>REINTENTAR</button>
+        </div>
+        <p id="respuesta" class="mensaje-estado">Presiona '¡PARAR!' o la barra espaciadora para comenzar.</p>
+      </section>
+    </main>
+  </body>
+</html>
